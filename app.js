@@ -33,7 +33,7 @@ var users = {};
 var bans = [];
 var uid = 1;
 
-var alphanumeric = /^\w+$/;
+var alphanumeric = /^[a-zа-я0-9_]+$/i;
 
 if(config.readline.use) {
     var rl = readline.createInterface(process.stdin, process.stdout);
