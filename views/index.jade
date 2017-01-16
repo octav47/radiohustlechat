@@ -133,31 +133,31 @@ html(lang='en')
                             b Chat options:
                         .togglebutton
                             label
-                                | Emojis
+                                | Emoji
                                 input#emoji(type='checkbox')
-                        .togglebutton
+                        .togglebutton(style="display: none;")
                             label
                                 | Greentext
                                 input#greentext(type='checkbox')
-                        #toggle-inline.togglebutton
+                        #toggle-inline.togglebutton(style="display: none;")
                             label
                                 | Inline Images
                                 input#inline(type='checkbox')
                         .togglebutton
                             label
-                                | Mention Sound
+                                | Звук уведомления
                                 input#sound(type='checkbox')
                         #toggle-desktop.togglebutton(style='display:none')
                             label
-                                | Desktop Notifications
+                                | Push-уведомления
                                 input#desktop(type='checkbox')
                         #toggle-synthesis.togglebutton(style='display:none')
                             label
-                                | Speech Synthesis [Experimental]
+                                | Читать сообщения вслух [Experimental]
                                 input#synthesis(type='checkbox')
                         #toggle-recognition.togglebutton(style='display:none')
                             label
-                                | Speech Recognition [Experimental]
+                                | Распознавание речи [Experimental]
                                 input#recognition(type='checkbox')
         #users-dialog.modal.fade(tabindex='-1')
             .modal-dialog.modal-lg
