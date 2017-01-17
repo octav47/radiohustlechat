@@ -189,6 +189,8 @@ function updateUser(id, name) {
         if(name.length < 3 || name.length > 16) motive = 'length';
         if(utils.checkUser(clients, name) || name.toLowerCase() == 'Console' ||
             name.toLowerCase() == 'System' ||
+            name == 'Admin' ||
+            name == 'Administrator' ||
             name.toLowerCase() == 'Система' ||
             name.toLowerCase() == 'Админ' ||
             name == 'Администратор') motive = 'taken';
