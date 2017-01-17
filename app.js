@@ -187,7 +187,11 @@ function updateUser(id, name) {
 
         if(!name.match(alphanumeric)) motive = 'format';
         if(name.length < 3 || name.length > 16) motive = 'length';
-        if(utils.checkUser(clients, name) ||  name == 'Console' || name == 'System') motive = 'taken';
+        if(utils.checkUser(clients, name) || name.toLowerCase() == 'Console' ||
+            name.toLowerCase() == 'System' ||
+            name.toLowerCase() == 'Система' ||
+            name.toLowerCase() == 'Админ' ||
+            name == 'Администратор') motive = 'taken';
         if(clients[id].un != null) check = true;
 
         clients[id].con.write(JSON.stringify({type:'server', info:'rejected', reason:motive, keep:check}));
