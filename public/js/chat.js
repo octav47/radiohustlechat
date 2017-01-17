@@ -119,7 +119,7 @@ var connect = function () {
                     }
 
                     if (data.reason == 'format') {
-                        message = 'Разрешены только цифры, буквы и нижнее подчёркивание';
+                        message = 'Разрешены только цифры, английские буквы и нижнее подчёркивание';
                     }
 
                     if (data.reason == 'taken') {
