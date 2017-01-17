@@ -163,7 +163,14 @@ chat.on('connection', function(conn) {
 
 /* Functions */
 function updateUser(id, name) {
-    if(name.length > 2 && name.length < 17 && name.indexOf(' ') < 0 && !utils.checkUser(clients, name) && name.match(alphanumeric) && name != 'Console' && name != 'System') {
+    if(name.length > 2 && name.length < 17 && name.indexOf(' ') < 0 && !utils.checkUser(clients, name) && name.match(alphanumeric) &&
+        name.toLowerCase() != 'console' &&
+        name.toLowerCase() != 'system' &&
+        name.toLowerCase() != 'admin' &&
+        name.toLowerCase() != 'administator' &&
+        name.toLowerCase() != 'система' &&
+        name.toLowerCase() != 'админ' &&
+        name.toLowerCase() != 'администратор') {
         if(clients[id].un == null) {
             clients[id].con.write(JSON.stringify({type:'server', info:'success'}));
             uid++;
