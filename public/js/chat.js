@@ -233,7 +233,6 @@ var connect = function () {
     }
 
     socket.onerror = function (e) {
-        alert('error');
         console.log(e);
     }
 };
